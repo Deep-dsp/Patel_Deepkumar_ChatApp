@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" integrity="sha512-8bHTC73gkZ7rZ7vpqUQThUDhqcNFyYi2xgDgPDHc+GXVGHXq+xPjynxIopALmOPqzo9JZj0k6OqqewdGO3EsrQ==" crossorigin="anonymous" />
+    <title>Chat App</title>
+</head>
+<body>
+    <main id="app">
+        <img src="/images/logo.png" alt="">
+        <!-- Vue Custom message component goes here -->
+        <section class="messages">
+            <ul id="messages" v-for="message in messages">
+                <newmessage :msg="message" :socketid="socketID"></newmessage>
+            </ul>
+        </section>
+
+
+        <section class="message-wrapper">
+            <div class="upload-button">
+                <i class="upload icon"></i>
+            </div>
+            <textarea v-model="message" class="text-message"></textarea> <!-- v-model - save whatever you write in textarea into the variable "message" in vue main.js-->
+            <div class="upload-button" @click.prevent="displatchMessage" type="submit">
+                <i class="play circle icon"></i>
+            </div>
+            <!-- <input @click.prevent="displatchMessage" type="submit" value="send"> -->
+        </section>
+    </main>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script defer type="module" src="scripts/main.js"></script>
+</body>
+</html>
