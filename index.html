@@ -7,18 +7,19 @@
     <title>chat app</title>
 </head>
 <body>  
-    <main>
-        <h1 class="hidden">Super sassy chat app-silly</h1>
-        <h4>Add Username to join chat</h4>
-        <h6>or not, to stealth post</h6>
-
-        <input type="text" placeholder="your handle">
-        <input type="password" placeholder="password">
-
-        <input type="submit" value="JOIN">
-
-        <!-- temp hack to bypass login -->
-        <a href="/chat">to chat page</a>
+    <main id="app" class="main-bg">
+        <section id="index-form">
+            <img src="/images/logo.png" alt="">
+            <p>Add Username to join chat</p>
+            <input type="text" class="username" placeholder="your username" required>
+            <!-- <input href="/chat" type="submit" value="JOIN"> -->
+            <a href="/chat"  @click="displatchMessage" class="button">Join</a>
+            <!-- temp hack to bypass login -->
+            
+        </section>
     </main>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script defer type="module" src="scripts/main.js"></script>
 </body>
 </html>

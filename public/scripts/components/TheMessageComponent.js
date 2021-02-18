@@ -6,7 +6,7 @@ export default{
         <article class="new-message" :class="{'my-messages': matchedID}">
             <h4>{{msg.message.name}} says:</h4>
             <p>{{msg.message.content}}</p>
-            <p>This is a message</p>
+            <p>{{msg.message.date}}</p>
         </article>
     `,
 
