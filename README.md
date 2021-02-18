@@ -34,7 +34,7 @@ Clone this to the location of your choice, open in your favourite editor and hac
 
 ## References 
 
-Icon from [www.semantic-ui.com](www.semantic-ui.com)
+Icon from [www.semantic-ui.com](https://semantic-ui.com/)
 
 ## License
 MIT
